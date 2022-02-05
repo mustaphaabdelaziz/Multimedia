@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="673.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FXMLDocumentController">
+    <children>
+        <ImageView fx:id="imageViewSource" fitHeight="170.0" fitWidth="292.0" layoutX="16.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="i1" fitHeight="238.0" fitWidth="305.0" layoutX="10.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="196.0" layoutY="14.0" prefHeight="55.0" prefWidth="305.0" text="Interface d'image" textAlignment="CENTER" textFill="#eb4040" AnchorPane.leftAnchor="196.0" AnchorPane.rightAnchor="147.0">
+            <font>
+                <Font name="System Italic" size="38.0" />
+            </font>
+        </Label>
+
+        <Button layoutX="331.0" layoutY="307.0" mnemonicParsing="false" onAction="#histogramme" text="Histogramme RGB" />
+        <Label layoutX="119.0" layoutY="76.0" prefHeight="32.0" prefWidth="85.0" text="AVANT" textAlignment="CENTER" textFill="#f4eff8">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="119.0" layoutY="303.0" prefHeight="32.0" prefWidth="85.0" text="APRES" textFill="#f5f2f2">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <BorderPane layoutX="325.0" layoutY="101.0" prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #86A57F;">
+            <top>
+                <Button fx:id="blanc" mnemonicParsing="false" onAction="#handleButtonAction3" prefHeight="25.0" prefWidth="85.0" style="-fx-background-color: white;" text="Blanc/Noire" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <Button fx:id="gris" mnemonicParsing="false" onAction="#handleButtonAction2" prefHeight="25.0" prefWidth="85.0" text="Gris" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <Button fx:id="enColeur" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="85.0" text="Couleur" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+        <BorderPane layoutX="509.0" layoutY="101.0" prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #86A57F;">
+            <top>
+                <TextField fx:id="l" prefHeight="25.0" prefWidth="76.0" promptText="Entrez un %" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <Button fx:id="zoomAvant" mnemonicParsing="false" onAction="#handleButtonAction4" prefHeight="25.0" prefWidth="85.0" text="Zoom avant" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <Button fx:id="zoomArire" mnemonicParsing="false" onAction="#handleButtonAction5" prefHeight="25.0" prefWidth="85.0" text="Zoom arri�re" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+        <BorderPane layoutX="325.0" layoutY="342.0" prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #86A57F;">
+            <top>
+                <Button fx:id="rotationD" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="25.0" prefWidth="95.0" text="Rotation droite" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <Button fx:id="retationG" mnemonicParsing="false" onAction="#handleButtonAction6" prefHeight="25.0" prefWidth="105.0" text="Rotation gauche" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <Button fx:id="next" mnemonicParsing="false" onAction="#flou" prefHeight="23.0" prefWidth="87.0" text="Flou" textAlignment="CENTER" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+        <BorderPane layoutX="509.0" layoutY="342.0" prefHeight="200.0" prefWidth="125.0" style="-fx-background-color: #86A57F;">
+            <top>
+                <Button mnemonicParsing="false" onAction="#sombre" text="Sombre" BorderPane.alignment="CENTER" />
+            </top>
+            <center>
+                <Button mnemonicParsing="false" onAction="#claire" text="Brillante" BorderPane.alignment="CENTER" />
+            </center>
+            <bottom>
+                <Button mnemonicParsing="false" onAction="#Tresclaire" text="Claire" BorderPane.alignment="CENTER" />
+            </bottom>
+        </BorderPane>
+        <Button layoutX="516.0" layoutY="307.0" mnemonicParsing="false" onAction="#histogramme2" text="Histogramme gris" />
+      <Button fx:id="ajouterImage" layoutX="32.0" layoutY="29.0" mnemonicParsing="false" onAction="#ajouterImage" prefHeight="25.0" prefWidth="125.0" text="Ajouter Image" />
+    </children>
+</AnchorPane>

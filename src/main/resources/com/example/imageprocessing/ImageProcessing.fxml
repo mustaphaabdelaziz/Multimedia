@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" stylesheets="@ImageProcessing.css" xmlns="http://javafx.com/javafx/1.8.0_222" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ImageProcessing">
+   <children>
+      <AnchorPane fx:id="root" prefHeight="650.0" prefWidth="950.0">
+         <children>
+            <JFXButton fx:id="close" buttonType="RAISED" cancelButton="true" layoutX="145.0" layoutY="575.0" onAction="#clsoe" prefHeight="44.0" prefWidth="107.0" ripplerFill="#403f3b" text="Fermer" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Condensed" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="browse" alignment="CENTER" buttonType="RAISED" defaultButton="true" graphicTextGap="0.0" layoutX="794.0" layoutY="542.0" onAction="#chooseFile" prefHeight="63.0" prefWidth="114.0" ripplerFill="#171515" text=" " textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Condensed" size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="94.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Add_Image_65px.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="ImageProcessing" layoutX="200.0" layoutY="14.0" text="Image Processing" textAlignment="CENTER" textFill="#f82b2b">
+               <font>
+                  <Font name="Ubuntu Condensed" size="44.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="save" buttonType="RAISED" layoutX="28.0" layoutY="575.0" onAction="#save" prefHeight="38.0" prefWidth="85.0" text="Save">
+               <font>
+                  <Font name="Ubuntu Condensed" size="20.0" />
+               </font>
+            </JFXButton>
+            <HBox layoutX="668.0" layoutY="462.0" prefHeight="51.0" prefWidth="270.0" spacing="25.0">
+               <children>
+                  <JFXButton fx:id="Zoom_out" buttonType="RAISED" contentDisplay="CENTER" disable="true" graphicTextGap="0.0" onAction="#zoomOut" prefHeight="42.0" prefWidth="126.0" text="Zoom Out ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Ubuntu Condensed" size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="Zoom_In" buttonType="RAISED" contentDisplay="CENTER" disable="true" graphicTextGap="0.0" onAction="#zoomIn" prefHeight="42.0" prefWidth="109.0" text="Zoom In">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Ubuntu Condensed" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <VBox layoutX="752.0" layoutY="117.0" prefHeight="321.0" prefWidth="166.0" spacing="10.0">
+               <children>
+                  <JFXRadioButton fx:id="gray" disable="true" text="Gray" textFill="#ebb52e">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="26.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="color" disable="true" text="Color" textFill="#ebb52e">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="26.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="setdefault" disable="true" text="Set Default" textFill="#ebb52e">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="26.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="NoirEtBlanc" disable="true" text="Noir et Blanc" textFill="#ebb52e">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="26.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="flou" disable="true" layoutX="10.0" layoutY="130.0" text="Flou" textFill="#ebb52e">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="26.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="Lighten" disable="true" onAction="#imageEclaircie" text="Lighten" textFill="#ebb22f">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="24.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="Darken" disable="true" layoutX="10.0" layoutY="210.0" onAction="#imageSombre" text="Darken" textFill="#ebb22f">
+                     <font>
+                        <Font name="Ubuntu Condensed" size="24.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+            </VBox>
+            <HBox layoutX="724.0" layoutY="47.0" prefHeight="63.0" prefWidth="200.0" spacing="25.0">
+               <children>
+                  <JFXButton fx:id="Rotation_Left" buttonType="RAISED" contentDisplay="CENTER" disable="true" graphicTextGap="0.0" onAction="#rotate_To_Left" prefHeight="25.0" prefWidth="52.0" ripplerFill="#d6b51e" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Rotate_Left_52px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="Rotation_Right" buttonType="RAISED" contentDisplay="CENTER" disable="true" graphicTextGap="0.0" onAction="#rotate_To_Right" prefHeight="25.0" prefWidth="52.0" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Rotate_Right.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <JFXButton fx:id="histogramme" buttonType="RAISED" disable="true" layoutX="319.0" layoutY="575.0" onAction="#histogram" text="Histogramme">
+               <font>
+                  <Font name="Ubuntu Condensed" size="20.0" />
+               </font>
+            </JFXButton>
+            <ImageView fx:id="imageviewer" fitHeight="370.0" fitWidth="488.0" layoutX="162.0" layoutY="125.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

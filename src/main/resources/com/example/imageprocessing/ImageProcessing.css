@@ -1,0 +1,29 @@
+#stackPane{
+	-fx-background-color: #212121;
+	
+	}
+.button{
+	-fx-background-color: #f9a825;
+}
+
+#loginText:hover{
+	-fx-underline: true;
+	-fx-scale-x: 1.05;
+	-fx-scale-y: 1.05;
+}
+.button:hover{
+	-fx-text-fill: black;
+	-fx-background-color :rgb(239,164,0);
+	-fx-scale-x: 1.05;
+	-fx-scale-y: 1.05;
+}
+#imageviewer{
+    -fx-border-color: #263238;
+    -fx-border-insets: 5;
+    -fx-border-width: 3;
+    -fx-border-style:solid;
+    -fx-border-radius:20px;
+}
+#Rotation_Left,#Rotation_Right{
+   
+}
